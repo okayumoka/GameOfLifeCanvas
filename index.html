@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Game Of Life on Canvas</title>
+</head>
+<body>
+	<h1>Test</h1>
+
+	<canvas id="main-canvas"></canvas>
+	<canvas id="buf-canvas"></canvas>
+
+	<script src="./build/gol.js"></script>
+	<script>
+		var canvas = document.getElementById('main-canvas');
+		var bufCanvas = document.getElementById('buf-canvas');
+		var col = 30;
+		var row = 30;
+		var cellSize = 10;
+		var gol = new GameOfLife(canvas, bufCanvas, col, row, cellSize, 8);
+		gol.start();
+	</script>
+</body>
+</html>
+
+
